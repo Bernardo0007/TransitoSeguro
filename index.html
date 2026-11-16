@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Campanha educativa sobre a importância de respeitar as leis de trânsito: estatísticas, infrações do CTB, placas, vídeo e dicas para motoristas, pedestres e ciclistas.">
+  <title>Respeite as Leis de Trânsito | Programação Web 1 – IFBA Ilhéus</title>
+  <link rel="icon" href="img/logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== CABEÇALHO FIXO ===== -->
+  <header class="cabecalho" id="topo">
+    <div class="container cabecalho-conteudo">
+      <a href="#inicio" class="logo" data-testid="header-logo-link">
+        <img src="img/logo.svg" alt="Placa de atenção" class="logo-icone">
+        <span class="logo-texto">Trânsito<strong>Seguro</strong></span>
+      </a>
+      <nav class="menu" aria-label="Menu principal">
+        <ul>
+          <li><a href="#estatisticas" data-testid="nav-estatisticas-link">Estatísticas</a></li>
+          <li><a href="#infracoes" data-testid="nav-infracoes-link">Infrações</a></li>
+          <li><a href="#placas" data-testid="nav-placas-link">Placas</a></li>
+          <li><a href="#video" data-testid="nav-video-link">Vídeo</a></li>
+          <li><a href="#dicas" data-testid="nav-dicas-link">Dicas</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="inicio" data-testid="hero-section">
+      <div class="hero-sobreposicao"></div>
+      <div class="container hero-conteudo">
+        <span class="etiqueta">Campanha de conscientização</span>
+        <h1 data-testid="hero-title">Respeite as <span class="destaque">leis de trânsito</span>.</h1>
+        <p class="hero-texto">
+          Cada placa, cada faixa e cada limite de velocidade existe para proteger vidas.
+          Motoristas, pedestres e ciclistas dividem o mesmo espaço — e a segurança
+          depende da atitude de todos nós.
+        </p>
+        <a href="#dicas" class="botao" data-testid="hero-cta-button">Ver dicas de segurança</a>
+      </div>
+      <div class="faixa-zebrada" aria-hidden="true"></div>
+    </section>
+
+    <!-- ===== ESTATÍSTICAS ===== -->
+    <section class="secao" id="estatisticas" data-testid="stats-section">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="numero-secao">01</span>
+          <h2>Estatísticas de acidentes no Brasil</h2>
+          <p>Os números mostram por que respeitar as regras é uma questão de vida ou morte.</p>
+        </div>
+
+        <div class="estatisticas-layout">
+          <div class="destaque-numero" data-testid="stats-highlight">
+            <span class="numero-grande">+37 mil</span>
+            <p>mortes no trânsito brasileiro em 2024 — cerca de <strong>100 vidas perdidas por dia</strong>.</p>
+          </div>
+
+          <div class="tabela-wrapper">
+            <table class="tabela" data-testid="stats-table">
+              <caption>Óbitos por acidentes de transporte terrestre no Brasil</caption>
+              <thead>
+                <tr>
+                  <th scope="col">Ano</th>
+                  <th scope="col">Mortes</th>
+                  <th scope="col">Média por dia</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr><td>2020</td><td>32.716</td><td>≈ 89</td></tr>
+                <tr><td>2021</td><td>33.813</td><td>≈ 93</td></tr>
+                <tr><td>2022</td><td>33.894</td><td>≈ 93</td></tr>
+                <tr><td>2023</td><td>34.881</td><td>≈ 96</td></tr>
+                <tr><td>2024*</td><td>37.150</td><td>≈ 102</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <div class="tabela-wrapper">
+          <table class="tabela tabela-causas" data-testid="causes-table">
+            <caption>Principais fatores de risco associados aos acidentes</caption>
+            <thead>
+              <tr>
+                <th scope="col">Fator de risco</th>
+                <th scope="col">Por que é perigoso</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr><td>Excesso de velocidade</td><td>Aumenta a distância de frenagem e a gravidade das lesões.</td></tr>
+              <tr><td>Álcool ao volante</td><td>Reduz reflexos, atenção e percepção de risco.</td></tr>
+              <tr><td>Uso do celular</td><td>Tira os olhos da via e as mãos do volante por vários segundos.</td></tr>
+              <tr><td>Desrespeito à sinalização</td><td>Avançar sinal ou parada obrigatória provoca colisões graves.</td></tr>
+              <tr><td>Falta de cinto ou capacete</td><td>Multiplica o risco de morte em caso de colisão.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="fonte" data-testid="stats-source">
+          Fonte: Ministério da Saúde — DATASUS/SIM, dados consolidados divulgados pelo
+          Observatório Nacional de Segurança Viária (ONSV). *2024: dado mais recente da série.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== INFRAÇÕES DO CTB ===== -->
+    <section class="secao secao-escura" id="infracoes" data-testid="infractions-section">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="numero-secao">02</span>
+          <h2>Principais infrações do CTB</h2>
+          <p>O Código de Trânsito Brasileiro (Lei nº 9.503/1997) define as infrações, as multas e os pontos na CNH.</p>
+        </div>
+
+        <div class="tabela-wrapper">
+          <table class="tabela tabela-infracoes" data-testid="infractions-table">
+            <caption>Infrações mais comuns e suas penalidades</caption>
+            <thead>
+              <tr>
+                <th scope="col">Infração</th>
+                <th scope="col">Artigo</th>
+                <th scope="col">Gravidade</th>
+                <th scope="col">Multa</th>
+                <th scope="col">Pontos</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Dirigir sob influência de álcool</td>
+                <td>Art. 165</td>
+                <td><span class="selo selo-gravissima">Gravíssima (x10)</span></td>
+                <td>R$ 2.934,70</td>
+                <td>7 + suspensão</td>
+              </tr>
+              <tr>
+                <td>Usar o celular ao volante (segurando ou manuseando)</td>
+                <td>Art. 252, parágrafo único</td>
+                <td><span class="selo selo-gravissima">Gravíssima</span></td>
+                <td>R$ 293,47</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Avançar o sinal vermelho</td>
+                <td>Art. 208</td>
+                <td><span class="selo selo-gravissima">Gravíssima</span></td>
+                <td>R$ 293,47</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Não dar preferência ao pedestre na faixa</td>
+                <td>Art. 214, I</td>
+                <td><span class="selo selo-gravissima">Gravíssima</span></td>
+                <td>R$ 293,47</td>
+                <td>7</td>
+              </tr>
+              <tr>
+                <td>Excesso de velocidade acima de 50% do limite</td>
+                <td>Art. 218, III</td>
+                <td><span class="selo selo-gravissima">Gravíssima (x3)</span></td>
+                <td>R$ 880,41</td>
+                <td>7 + suspensão</td>
+              </tr>
+              <tr>
+                <td>Excesso de velocidade entre 20% e 50%</td>
+                <td>Art. 218, II</td>
+                <td><span class="selo selo-grave">Grave</span></td>
+                <td>R$ 195,23</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Excesso de velocidade até 20%</td>
+                <td>Art. 218, I</td>
+                <td><span class="selo selo-media">Média</span></td>
+                <td>R$ 130,16</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>Não usar o cinto de segurança</td>
+                <td>Art. 167</td>
+                <td><span class="selo selo-grave">Grave</span></td>
+                <td>R$ 195,23</td>
+                <td>5</td>
+              </tr>
+              <tr>
+                <td>Conduzir moto sem capacete</td>
+                <td>Art. 244, I</td>
+                <td><span class="selo selo-gravissima">Gravíssima</span></td>
+                <td>R$ 293,47</td>
+                <td>7 + suspensão</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p class="fonte">
+          Fonte: Código de Trânsito Brasileiro (Lei nº 9.503/1997), com alterações da Lei nº 14.071/2020.
+          Valores-base: leve R$ 88,38 · média R$ 130,16 · grave R$ 195,23 · gravíssima R$ 293,47.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== PLACAS ===== -->
+    <section class="secao" id="placas" data-testid="signs-section">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="numero-secao">03</span>
+          <h2>Placas de trânsito</h2>
+          <p>As placas são a linguagem da via. Conheça os três grandes grupos de sinalização vertical.</p>
+        </div>
+
+        <h3 class="grupo-titulo grupo-regulamentacao">Regulamentação <small>— obrigações, limitações e proibições</small></h3>
+        <div class="galeria">
+          <article class="placa-card" data-testid="sign-card-pare">
+            <span class="placa-codigo">R-1</span>
+            <img src="img/r1-pare.svg" alt="Placa de parada obrigatória">
+            <h4>Parada obrigatória</h4>
+            <p>O condutor deve parar completamente antes de seguir.</p>
+          </article>
+          <article class="placa-card" data-testid="sign-card-proibido-estacionar">
+            <span class="placa-codigo">R-6a</span>
+            <img src="img/r6a-proibido-estacionar.svg" alt="Placa de proibido estacionar">
+            <h4>Proibido estacionar</h4>
+            <p>Não é permitido estacionar o veículo no trecho sinalizado.</p>
+          </article>
+          <article class="placa-card" data-testid="sign-card-velocidade">
+            <span class="placa-codigo">R-19</span>
+            <img src="img/r19-velocidade.svg" alt="Placa de velocidade máxima permitida de 60 km/h">
+            <h4>Velocidade máxima</h4>
+            <p>Indica o limite de velocidade permitido na via.</p>
+          </article>
+        </div>
+
+        <h3 class="grupo-titulo grupo-advertencia">Advertência <small>— alertam sobre perigos à frente</small></h3>
+        <div class="galeria">
+          <article class="placa-card" data-testid="sign-card-semaforo">
+            <span class="placa-codigo">A-14</span>
+            <img src="img/a14-semaforo.svg" alt="Placa de semáforo à frente">
+            <h4>Semáforo à frente</h4>
+            <p>Reduza a velocidade: há um semáforo adiante.</p>
+          </article>
+          <article class="placa-card" data-testid="sign-card-pedestres">
+            <span class="placa-codigo">A-32b</span>
+            <img src="img/a32b-pedestres.svg" alt="Placa de passagem sinalizada de pedestres">
+            <h4>Passagem de pedestres</h4>
+            <p>Atenção à travessia de pedestres na faixa.</p>
+          </article>
+          <article class="placa-card" data-testid="sign-card-escorregadia">
+            <span class="placa-codigo">A-28</span>
+            <img src="img/a28-escorregadia.svg" alt="Placa de pista escorregadia">
+            <h4>Pista escorregadia</h4>
+            <p>Pista com pouca aderência: dirija com cuidado.</p>
+          </article>
+        </div>
+
+        <h3 class="grupo-titulo grupo-indicacao">Indicação <small>— orientam e informam</small></h3>
+        <div class="galeria">
+          <article class="placa-card" data-testid="sign-card-hospital">
+            <span class="placa-codigo">Serviço</span>
+            <img src="img/s-hospital.svg" alt="Placa indicativa de hospital">
+            <h4>Hospital</h4>
+            <p>Indica a proximidade de um serviço de saúde.</p>
+          </article>
+          <article class="placa-card" data-testid="sign-card-estacionamento">
+            <span class="placa-codigo">Serviço</span>
+            <img src="img/s-estacionamento.svg" alt="Placa de área de estacionamento">
+            <h4>Área de estacionamento</h4>
+            <p>Mostra onde é permitido estacionar.</p>
+          </article>
+          <article class="placa-card" data-testid="sign-card-destino">
+            <span class="placa-codigo">Destino</span>
+            <img src="img/i-destino.svg" alt="Placa de indicação de destino para Ilhéus e Itabuna">
+            <h4>Indicação de destino</h4>
+            <p>Orienta o caminho para cidades e localidades.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== VÍDEO ===== -->
+    <section class="secao secao-amarela" id="video" data-testid="video-section">
+      <div class="container video-layout">
+        <div class="video-texto">
+          <span class="numero-secao">04</span>
+          <h2>Vídeo educativo</h2>
+          <p>
+            Filme oficial do <strong>Maio Amarelo</strong>, movimento internacional de
+            conscientização para a redução de acidentes, produzido pelo Observatório
+            Nacional de Segurança Viária (ONSV).
+          </p>
+          <p class="citacao">“No trânsito, enxergar o outro é salvar vidas.”</p>
+        </div>
+        <div class="video-moldura">
+          <iframe
+            data-testid="video-iframe"
+            src="https://www.youtube.com/embed/JfkQNn1ty3M?si=ph_djuGp_tHNjBAF"
+            title="Maio Amarelo – No trânsito, enxergar o outro é salvar vidas"
+            allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== DICAS ===== -->
+    <section class="secao" id="dicas" data-testid="tips-section">
+      <div class="container">
+        <div class="secao-titulo">
+          <span class="numero-secao">05</span>
+          <h2>Dicas de segurança</h2>
+          <p>Pequenas atitudes do dia a dia fazem um trânsito mais seguro para todos.</p>
+        </div>
+
+        <div class="dicas">
+          <article class="dica-card dica-motorista" data-testid="tip-card-motoristas">
+            <span class="dica-icone" aria-hidden="true">🚗</span>
+            <h3>Motoristas</h3>
+            <ul>
+              <li>Use sempre o cinto e exija o mesmo dos passageiros.</li>
+              <li>Respeite os limites de velocidade.</li>
+              <li>Se beber, não dirija.</li>
+              <li>Celular só com o veículo estacionado.</li>
+              <li>Dê preferência ao pedestre na faixa.</li>
+            </ul>
+          </article>
+          <article class="dica-card dica-pedestre" data-testid="tip-card-pedestres">
+            <span class="dica-icone" aria-hidden="true">🚶</span>
+            <h3>Pedestres</h3>
+            <ul>
+              <li>Atravesse sempre na faixa ou na passarela.</li>
+              <li>Respeite o semáforo de pedestres.</li>
+              <li>Olhe para os dois lados antes de atravessar.</li>
+              <li>Evite usar o celular durante a travessia.</li>
+              <li>À noite, use roupas claras para ser visto.</li>
+            </ul>
+          </article>
+          <article class="dica-card dica-ciclista" data-testid="tip-card-ciclistas">
+            <span class="dica-icone" aria-hidden="true">🚲</span>
+            <h3>Ciclistas</h3>
+            <ul>
+              <li>Use capacete e equipamentos refletivos.</li>
+              <li>Pedale no mesmo sentido dos carros.</li>
+              <li>Prefira ciclovias e ciclofaixas.</li>
+              <li>Sinalize com o braço antes de virar.</li>
+              <li>Mantenha campainha, freios e luzes em dia.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== RODAPÉ ===== -->
+  <footer class="rodape" data-testid="footer">
+    <div class="faixa-zebrada" aria-hidden="true"></div>
+    <div class="container rodape-conteudo">
+      <div>
+        <p class="rodape-titulo">Trânsito<strong>Seguro</strong></p>
+        <p>Programação Web 1 – IFBA Campus Ilhéus · 2026</p>
+      </div>
+      <div>
+        <p class="rodape-subtitulo">Equipe</p>
+        <ul class="equipe" data-testid="footer-team">
+          <li>Angelina dos Santos Cardoso</li>
+          <li>Bernardo R.S</li>
+          <li>Tayná Pereira de Lima</li>
+        </ul>
+      </div>
+      <a href="#inicio" class="voltar-topo" data-testid="footer-back-to-top">↑ Voltar ao topo</a>
+    </div>
+  </footer>
+
+</body>
+</html>
